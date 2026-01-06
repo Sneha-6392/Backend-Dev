@@ -1,0 +1,14 @@
+1. cd - change directory
+used to move from one directory (folder) to another.
+2. cp - copy
+used to copy files or folder.
+3. pwd - print working directory
+shows the current directory path you are in.
+4. mkdir - make directory
+used to create new folder.
+5. ls - list
+shows file and folder in the current directory.
+6. touch 
+used to create a new empty file.
+7. cat - concatenate
+used to display the contents of a file, create a file and combine multiple files.
