@@ -1,0 +1,1 @@
+the number of words in the file task1.txt is 6
