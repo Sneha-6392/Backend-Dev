@@ -1,42 +1,42 @@
 const fs = require('fs');
 
-// fs.mkdir('newDirectory', (err) => {
-//     if (err) {
-//         return;
-//     }
-//     console.log('Directory is created');    
-// });
+fs.mkdir('newDirectory', (err) => {
+    if (err) {
+        return;
+    }
+    console.log('Directory is created');    
+});
 
 
-// fs.mkdir('folder/folder1/folder2',{recursive:true},(err)=>{
-//     if(err) {
-//         console.log(err);
-//         return;
-//     }
-//     console.log('Directories is created');
-// });
+fs.mkdir('folder/folder1/folder2',{recursive:true},(err)=>{
+    if(err) {
+        console.log(err);
+        return;
+    }
+    console.log('Directories is created');
+});
 
 
 // directory read karne ke liye
 
-// fs.readdir('newDirectory',(err,files)=>{
-//     if(err) {
-//         console.log(err);
-//         return;
-//     }
-//     console.log(files);
-// });
+fs.readdir('newDirectory',(err,files)=>{
+    if(err) {
+        console.log(err);
+        return;
+    }
+    console.log(files);
+});
 
 
 //empty directory delete karne ke liye
 
-// fs.rmdir('newDirectory',(err)=>{
-//     if(err) {
-//         console.log(err);
-//         return;
-//     }
-//     console.log('newDirectory is deleted');
-// });
+fs.rmdir('newDirectory',(err)=>{
+    if(err) {
+        console.log(err);
+        return;
+    }
+    console.log('newDirectory is deleted');
+});
 
 
 //non-empty directory delete karne ke liye
