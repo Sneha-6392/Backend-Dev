@@ -15,14 +15,14 @@ fs.copyFileSync("text.txt", "textSyncCopy.txt")
 console.log("File is copied successfully using sync method");
 
 // to unlink
-// fs.unlink("textAsyncCopy.txt", (err) => {
-//   if (err) {
-//     console.error("Error while file is deleted", err);
-//   }
-//   else {
-//     console.log("File is deleted successfully");
-//   }
-// })
+fs.unlink("textAsyncCopy.txt", (err) => {
+  if (err) {
+    console.error("Error while file is deleted", err);
+  }
+  else {
+    console.log("File is deleted successfully");
+  }
+})
 
-// fs.unlinkSync("textSyncCopy.txt");
-// console.log("File is deleted successfully using sync method");
+fs.unlinkSync("textSyncCopy.txt");
+console.log("File is deleted successfully using sync method");
