@@ -1,0 +1,38 @@
+Q1. Explain the difference between fs.writeFile() and fs.writeFileSync(). In a server handling 100 users at once,   which one should you use and why?
+Ans. In a server handling 100 users at once, fs.writeFile() should be used because it is asynchronous and non-blocking. It allows Node.js to handle multiple requests simultaneously without blocking the event loop, whereas fs.writeFileSync() blocks execution and degrades server performance.
+
+Q2. When a user types localhost:8000/admin?user=xyz in the browser:
+    ● What is the Pathname?
+    ● What is the Query Parameter?
+    ● Which Node.js built-in module is used to separate these two?
+Ans. ● localhost:8000/admin
+     ● user=xyz
+     ● url module
+
+Q4. Which method is the most appropriate for deleting a directory that might contain files, ensuring a 'recursive' deletion?
+Ans. fs.rm(path, { recursive: true })
+
+Q5. In Git, which command moves changes from the Working Directory to the Staging Area?
+Ans. git add
+
+Q6. Node.js is described as "Non-blocking" and "Asynchronous". Explain what this means using the example of reading a file while still being able to handle a web request.
+Ans. Node.js is non-blocking and asynchronous, which means it does not wait for long operations like file reading to complete. While a file is being read in the background, Node.js can continue handling other web requests. Once the file read operation finishes, a callback is executed to send the response, allowing efficient handling of multiple users simultaneously.
+
+Q7. Explain the Git workflow from creating a repository to pushing code to GitHub.
+Ans. ● git init
+     ● git clone <repo-url>
+     ● git status
+     ● git add file.js      # stage one file           
+     ● git add .            # stage all changes
+     ● git commit -m "Initial project setup"
+     ● git remote add origin <repo-url>
+     ● git push origin main
+
+Q8. Explain in short Difference between fs.unlink() and fs.rm()
+Ans. fs.unlink() deletes only files, whereas fs.rm() can delete both files and directories, including directories with files using the recursive option.
+
+Q9. What is the purpose of res.writeHead()? Explain the significance of status codes 200, 401, and 404 in the context of a login system.
+Ans. res.writeHead() is used to set the HTTP status code and response headers before sending the response. In a login system, status code 200 indicates a successful login, 401 indicates unauthorized access due to invalid credentials, and 404 indicates that the requested login page or route was not found.
+
+
+
