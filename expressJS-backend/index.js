@@ -14,21 +14,17 @@ app.get("/", (req, res) => {
     res.send("Welcome to Express page");
 });
 
-app.get("/user", (req, res) => {
-    res.send("Welcome to User page");
-});
-
-app.get("/students", (req, res) => {
-    res.json(students);
-});
-
 app.get("/students/:id", (req, res) => {
-    res.send("")
+    const id = params.id;
+    const arrayIndex = students.findIndex((student) => student.id == id);
+    const data = students[arrayIndex];
+    res.json(data);
 });   
 
-app.get("/students/search", (req, res) => {
-    const searchQuery = req.query;
-    console.log("Search Query:", searchQuery);
+app.get("/students", (req, res) => {
+    const branch = req.query.branch;
+    const foundStudents = students.filter((student) => student.branch === branch);
+    res.json(foundStudents);
 });
 
 app.listen(PORT, () => {
