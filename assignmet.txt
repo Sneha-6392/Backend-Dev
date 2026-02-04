@@ -1,0 +1,38 @@
+ques1.What is the difference between synchronous and asynchronous file operations?
+ans1.in synchronous The program waits until the file operation is fully completed.it executes one task at a time.
+While the file is being read or written, nothing else runs.
+in asynchronous File operation starts, and the program continues executing other code.in exucution it Uses callbacks, promises, or async/await.
+File handling happens in the background.
+
+ques2.When should you use file streams instead of reading the entire file?
+ans2.we have to use file streams when:
+1.The file is very large.
+2.When memory efficiency matters.
+3.When processing data sequentially.
+
+ques3.Explain the purpose of the ‘utf8’ encoding parameter in file operations.
+ans3.is a character encoding standard that defines how text characters are stored as bytes in a file.
+to read and write text not in raw or binary format and also to handle special characters.
+
+ques4.How would you safely delete a directory with all its contents?
+ans4.by using fs.rm()method we can safely delete directory with all its contenets because it can delete recursively .by recursive:true it can delete all files and folders.
+
+ques 5.Explain the concept of piping in streams with an example.
+ans 5.Piping means connecting one stream directly to another so that the output of one stream becomes the input of another stream.
+example:
+const fs = require("fs");
+
+const readStream = fs.createReadStream("input.txt");
+const writeStream = fs.createWriteStream("output.txt");
+
+readStream.pipe(writeStream);
+
+ques6.Why is it important to handle errors in file operations?
+ans6.handling errors in file operations is very important in manty ways:
+Protects data from corruption.
+Prevents application crashes.
+Improves security.
+Gives meaningful feedback.
+
+ques 7.What is the difference between writeFile and appendFile methods?
+ans 7.both re file operations they both creates adds data to file if it is already creates ,if not creates then creates one but maindifference is write file overwrites the existing data whie appendfile simple adds the data at end.
