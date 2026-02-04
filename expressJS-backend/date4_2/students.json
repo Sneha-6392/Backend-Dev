@@ -1,0 +1,17 @@
+[
+  {
+    "id": 1,
+    "name": "Vanshika",
+    "branch": "ECE"
+  },
+  {
+    "id": 2,
+    "name": "Sneha",
+    "branch": "CSE"
+  },
+  {
+    "id": 3,
+    "name": "Astha",
+    "branch": "CSE"
+  }
+]
